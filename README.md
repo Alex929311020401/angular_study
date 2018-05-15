@@ -25,8 +25,22 @@ M --- V 没有耦合
 双向数据绑定  数据改变 <---> 视图变化
 ng-modal  双向数据绑定
 ng-bind   输出（数据 --> 视图）
-ng-app    范围
+ng-app    范围  
 
+**angular 核心是数据**
+angular {{表达式}}
+ng-init 初始化 给数据初始值
 
+指令：1、系统指令；2、自定义指令
+
+数据循环 ng-repeat
+1、数字数组数据重复 报错
+    angular 出于性能考虑  数据 <---> 元素对应   key：数字数组，数组中数字做key 
+    $index 是angular 内针对ng-repeat提供的隐含index变量名称，如果在ng-repeat嵌套使用时，index名称会发生冲突及覆盖。这是也应该使用自定义的变量名。 
+    item in arr track by $index
+2、json数组数据重复 不报错
+    [1,2,3] == [1,2,3] //false 
+    new Array(1,2,3) == new Array(1,2,3) 对象
+3、ng-repeat = "(k,v) in json"
 
 
