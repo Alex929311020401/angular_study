@@ -7,13 +7,29 @@
     <title>第一个controller</title>
 </head>
 <body ng-controller="main">
-    {{a}}
+    <!-- {{a}} -->
+    <input type="text" ng-model="a">
+    <input type="text" ng-model="b">
+    {{parseInt(a) + parseInt(b)}}
     <!-- $scope 上 -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
     <script>
+        // let mod = angular.module('test',[]);
+        // mod.controller('main',function($scope){
+        //     $scope.a = 12;
+        // });
+        /*
+        * 打通 js 及 angular
+        */
         let mod = angular.module('test',[]);
         mod.controller('main',function($scope){
-            $scope.a = 12;
+            $scope.a = 0;
+            $scope.b = 0;
+            // $scope 添加方法
+            $scope.parseInt = function(str){
+                // js
+                return window.parseInt(str);
+            }
         });
     </script>
 </body>
