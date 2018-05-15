@@ -48,6 +48,14 @@ angular 环境 和 js 环境 默认不互通
 ng空间 与 js空间  
 
 ng-click angular click 事件   
-push数组结尾添加  unshift数组头添加    返回数组  
+push数组结尾添加  unshift数组头添加    返回数组长度 
 pop数组结尾删除  shift数组开头删除     返回删除数据
+
+**模块化**
+1、写模块  angular.modal(名字，[依赖])  
+2、用模块  ng-app="名字"
+
+**controller**  
+controller 不能独立存在  属于某一个模块  
+
 
