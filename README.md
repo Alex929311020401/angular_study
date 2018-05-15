@@ -63,10 +63,10 @@ controller 不能独立存在  属于某一个模块
 2、$scope是一个表达式的执行环境  
 
 AngularJS中，一个scope跟一个元素关联（以及所有它的子元素），而一个元素不是必须直接跟一个scope关联。元素通过以下三中方式被分配一个scope：  
-1、scope通过controller或者directive创建在一个element上（指令不总是引入新的scope）
+1、scope通过controller或者directive创建在一个element上（指令不总是引入新的scope）  
     `<nav ng-controller='menuCtrl'>`
-2、如果一个scope不存在于元素上，那么它将继承它的父级scope
-    `<nav ng-controller='menuCtrl'><a ng-click='navigate()'>Click Me!</a></nav>`
+2、如果一个scope不存在于元素上，那么它将继承它的父级scope  
+    `<nav ng-controller='menuCtrl'><a ng-click='navigate()'>Click Me!</a></nav>`  
 3、如果一个元素不是某个ng-app的一部分，那么它不属于任何scope。
     ``` html
     <head>
