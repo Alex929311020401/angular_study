@@ -6,12 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>模块化</title>
 </head>
-<body>
+<body ng-controller="ctrl1">
     
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.js"></script>
     <script>
         //1、写模块
         let mod = angular.module("test",[])
+        //2、写controller 
+        mod.controller('ctrl1',function(){
+            //代码
+        });
     </script>
 </body>
 </html>
