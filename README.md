@@ -33,14 +33,21 @@ ng-init 初始化 给数据初始值
 
 指令：1、系统指令；2、自定义指令
 
-数据循环 ng-repeat
-1、数字数组数据重复 报错
-    angular 出于性能考虑  数据 <---> 元素对应   key：数字数组，数组中数字做key 
-    $index 是angular 内针对ng-repeat提供的隐含index变量名称，如果在ng-repeat嵌套使用时，index名称会发生冲突及覆盖。这是也应该使用自定义的变量名。 
-    item in arr track by $index
-2、json数组数据重复 不报错
-    [1,2,3] == [1,2,3] //false 
-    new Array(1,2,3) == new Array(1,2,3) 对象
-3、ng-repeat = "(k,v) in json"
+数据循环 ng-repeat  
+1、数字数组数据重复 报错  
+    angular 出于性能考虑  数据 <---> 元素对应   key：数字数组，数组中数字做key   
+    $index 是angular 内针对ng-repeat提供的隐含index变量名称，如果在ng-repeat嵌套使用时，index名称会发生冲突及覆盖。这是也应该使用自定义的变量名。   
+    item in arr track by $index  
+2、json数组数据重复 不报错  
+    [1,2,3] == [1,2,3] //false   
+    new Array(1,2,3) == new Array(1,2,3) 对象  
+3、ng-repeat = "(k,v) in json"  
 
+
+angular 环境 和 js 环境 默认不互通
+ng空间 与 js空间  
+
+ng-click angular click 事件   
+push数组结尾添加  unshift数组头添加    返回数组  
+pop数组结尾删除  shift数组开头删除     返回删除数据
 
