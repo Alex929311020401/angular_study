@@ -56,7 +56,10 @@ pop数组结尾删除  shift数组开头删除     返回删除数据
 2、用模块  ng-app="名字"
 
 **controller**  
-controller 不能独立存在  属于某一个模块  
+    controller 不能独立存在  属于某一个模块  
+    函数结尾有一个 检查语句 $scope.$apply();     
+    异步时 先执行检查     $scope 改变没有正确监听   
+    合理不合理都出于性能考虑
 
 **scope**
 1、$scope本身是一个普通的JavaScript对象  
@@ -69,5 +72,22 @@ AngularJS中，一个scope跟一个元素关联（以及所有它的子元素）
 2、如果一个scope不存在于元素上，那么它将继承它的父级scope  
     `<nav ng-controller='menuCtrl'><a ng-click='navigate()'>Click Me!</a></nav>`  
 3、如果一个元素不是某个ng-app的一部分，那么它不属于任何scope。  
+
+
+angular特性：  
+**双向数据绑定**
+    ng-modol  $scope <---> html   
+    数据更新，视图自动更新
+
+**依赖注入**    
+    函数定义决定参数  
+    $scope 、$http 、$timeout 依赖项  
+
+
+**函数**  
+    被动接受参数
+
+**脏检查**
+
 
 
